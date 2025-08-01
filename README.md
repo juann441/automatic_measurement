@@ -25,14 +25,4 @@ Outil Python de mesure automatique de la déformation d’éprouvettes de tracti
 ---
 
 ## 🗂️ Structure du projet
-automatic_measurement/
-├── utils/
-│ ├── correlation.py
-│ ├── segmentation.py
-│ ├── maths_utils.py
-│ └── ... autres scripts
-├── gui/
-│ └── app.py # Interface graphique (Tkinter)
-├── run_app.py # Script principal pour lancer l'application
-├── requirements.txt
-└── README.md
+``` automatic_measurement/ ├── utils/ │ ├── correlation.py │ ├── segmentation.py │ ├── maths_utils.py │ └── ... autres scripts ├── gui/ │ └── app.py # Interface graphique (Tkinter) ├── run_app.py # Script principal pour lancer l'application ├── requirements.txt └── README.md ``` 
