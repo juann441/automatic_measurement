@@ -25,7 +25,7 @@ Outil Python de mesure automatique de la déformation d’éprouvettes de tracti
 ---
 
 ## 🗂️ Structure du projet
-"""
+```
 automatic_measurement
 │   README.md
 │   run_app.py
@@ -42,4 +42,4 @@ automatic_measurement
 │
 └───gui
     │   app.py
-"""
+```
