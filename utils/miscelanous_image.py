@@ -394,3 +394,61 @@ def display_gradient_images(first_grad, last_grad):
     plt.imshow(last_grad, cmap='gray')
     plt.title("Dernière image")
     plt.show()
+
+def apply_segmentation_correction(image, tailleCorrect, corriger_eprouvette):
+    """
+    Applique une correction morphologique de "fermeture" à une image segmentée.
+
+    Args:
+        image (np.ndarray): L'image segmentée à corriger.
+        tailleCorrect (int): La taille de l'élément structurant.
+        corriger_eprouvette (bool): True si on corrige l'éprouvette, False pour le fond.
+        
+    Returns:
+        np.ndarray: L'image corrigée.
+    """
+    if corriger_eprouvette:
+        return cv2.morphologyEx(image, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (tailleCorrect, tailleCorrect)))
+    else:
+        # Logique pour corriger le fond
+        inverted_image = np.max(image) - image
+        corrected_inverted = cv2.morphologyEx(inverted_image, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (tailleCorrect, tailleCorrect)))
+        return np.max(corrected_inverted) - corrected_inverted
+    
+import csv
+import tkinter as tk
+from tkinter import messagebox
+
+def save_to_csv(file_path, results_dict):
+    """
+    Enregistre les résultats dans un fichier CSV.
+    
+    Args:
+        file_path (str): Le chemin complet du fichier CSV.
+        results_dict (dict): Un dictionnaire où chaque clé est un titre
+                             et chaque valeur est une liste de résultats.
+    """
+    try:
+        with open(file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for title, data in results_dict.items():
+                writer.writerow([title])
+                for index, result in enumerate(data):
+                    writer.writerow([index, float(result)])
+        messagebox.showinfo("Info", "Résultats enregistrés avec succès")
+    except IOError as e:
+        messagebox.showerror("Erreur", f"Erreur lors de l'enregistrement du fichier : {e}")
+
+def plot_data(ax, data, label, color, taillemoy=None):
+    """
+    Trace un ensemble de données sur un axe matplotlib.
+    """
+    ax.plot(data, marker='.', linestyle='-', color=color, label=label)
+    if taillemoy is not None:
+        ax.legend([
+            f'Déformation locale(axiale) sur {taillemoy} pixels',
+            f'Déformation locale (axiale) vraie sur {taillemoy} pixels',
+            'Déformation moyenne(longitudinale) (suivi de deux points)',
+            'Déformation moyenne(longitudinale) (Tranches)'
+        ])
+    ax.set_xlabel("Images")

@@ -40,3 +40,16 @@ def preparationImagesUnique(img, flou):
     else:
         img = cv2.bilateralFilter(img,9,flou,flou)
         return img
+    
+import matplotlib.pyplot as plt
+
+def show_images_for_validation(image1, image2):
+    """Affiche deux images pour validation du flou avec Matplotlib."""
+    plt.figure()
+    plt.subplot(211)
+    plt.imshow(image1, cmap='gray')
+    plt.title("Première image")
+    plt.subplot(212)
+    plt.imshow(image2, cmap='gray')
+    plt.title("Dernière image")
+    plt.show()
