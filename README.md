@@ -25,5 +25,21 @@ Outil Python de mesure automatique de la déformation d’éprouvettes de tracti
 ---
 
 ## 🗂️ Structure du projet
-<pre lang="markdown"> ``` automatic_measurement/ 
-  ├── utils/ │ ├── correlation.py │ ├── segmentation.py │ ├── maths_utils.py │ ├── miscelanous_image.py │ ├── setup_images.py │ ├── utils_cv2.py │ ├── lpe.py │ └── ... autres scripts ├── gui/ │ └── app.py # Interface graphique (Tkinter) ├── run_app.py # Script principal pour lancer l'application ├── requirements.txt └── README.md ``` </pre>
+```
+project
+│   README.md
+│   file001.txt    
+│
+└───folder1
+│   │   file011.txt
+│   │   file012.txt
+│   │
+│   └───subfolder1
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│   
+└───folder2
+    │   file021.txt
+    │   file022.txt
+```
