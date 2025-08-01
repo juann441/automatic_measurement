@@ -1,3 +1,5 @@
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue)](https://www.python.org/)
+
 # Automatic Measurement of Specimen Deformation
 
 > 🔬 Python tool for measuring the deformation of tensile specimens from images, developed during an internship at Thiot Ingénierie (France).
