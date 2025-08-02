@@ -5,6 +5,7 @@
 # Automatic Measurement of Specimen Deformation
 
 > 🔬 Python tool for measuring the deformation of tensile specimens from images, developed during an internship at Thiot Ingénierie (France).
+> 
 ![Interface](./main_menu.png)
 
 ## 🧠 Description
