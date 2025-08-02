@@ -1,5 +1,5 @@
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue)](https://www.python.org/)
-[![Made with OpenCV]([https://img.shields.io/badge/Made%20with-Python-blue](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white))](https://www.opencv.org/)
+[![OpenCV]([https://img.shields.io/badge/Made%20with-Python-blue](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white))](https://www.opencv.org/)
 
 # Automatic Measurement of Specimen Deformation
 
