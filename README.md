@@ -2,7 +2,7 @@
 [![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)](https://www.opencv.org/)
 [![Tkinter](https://img.shields.io/badge/Tkinter%20-005AFF?style=for-the-badge&logo=python&logoColor=white)](https://docs.python.org/3.13/library/tkinter.html)
 
-# Automatic Measurement of Specimen Deformation (classic image processing version)
+# Automatic Measurement of Specimen Deformation \n (classic image processing version)
 
 > 🔬 Python tool for measuring the deformation of tensile specimens from images, developed during an internship at Thiot Ingénierie (France).
 > 
